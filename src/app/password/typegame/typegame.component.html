@@ -1,0 +1,13 @@
+
+<div class="container">
+    <div class="container-center">
+        <h1>game of typing</h1>
+  <p> 
+    <span [class]="compare(letter, enteredValue[i])" *ngFor="let letter of randoms.split(''); let i=index">{{letter}}</span>
+  </p>
+
+    <input (input)="onInput($event)">
+<p *ngIf="randoms===enteredValue"
+class="success">success!</p>
+    </div>
+</div>

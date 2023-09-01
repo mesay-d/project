@@ -1,0 +1,7 @@
+
+<p>formate the date from pipecomponenet</p>
+<label>input name</label>
+<input (input)="onchangeName($event)">{{inputvalue | titlecase}}
+
+<label>input date</label>
+<input type="date"   (input)="dateChange($event)"> {{InDate | date: 'MMMM d,y'}}

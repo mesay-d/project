@@ -1,0 +1,20 @@
+<p appDcustome>login works!</p>
+<div class="content-center">
+
+<form [formGroup]="login" (ngSubmit)="submite()">
+    <label for="username">username</label>
+    <input type="text" id="username" formControlName="username"/><br>
+    <label for="email">email</label>
+    <input type="email" id="email" formControlName="email"/><br>
+    <label for="password">password</label>
+<input type="text" id="password" formControlName="password"/><br>
+    <label for="conformationpassword">conformationpassword</label>
+<input type="text" id="conformationpassword" formControlName="conformationpassword"/><br>
+<button type="submit" [disabled]="!login.valid">submite</button>
+
+</form>
+
+</div>
+<!-- <app-table></app-table> -->
+
+
