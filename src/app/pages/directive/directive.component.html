@@ -1,0 +1,31 @@
+<p>directive works!</p>
+<nav>
+  <ul class="pagination">
+    <li class="page-item" [ngClass]="{ disabled: currentpage === 0 }">
+      <a class="page-link" (click)="currentpage = currentpage - 1">preview</a>
+    </li>
+
+    <ng-container *ngFor="let image of images; let i = index">
+      <li class="page-item" [ngClass]="{ active: i === currentpage }"
+      *ngIf="changePagenation(i)"
+      >
+        <a (click)="currentpage = i" class="page-link">{{ i + 1 }}</a>
+      </li>
+    </ng-container>
+
+    <li
+      class="page-item"
+      [ngClass]="{ disabled: currentpage === images.length - 1 }"
+    >
+      <a class="page-link" (click)="currentpage = currentpage + 1">next</a>
+    </li>
+  </ul>
+</nav>
+gi
+<!-- <div [ngSwitch]="currentpage">
+    <div *ngSwitchCase="1">my sewtch case1</div>
+    <div *ngSwitchCase="2">switch case 2</div>
+    <div *ngSwitchCase="4">switch case 3</div>
+    <div *ngSwitchDefault>{{currentpage+2}}</div>
+
+</div> -->

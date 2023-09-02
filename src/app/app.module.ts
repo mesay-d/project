@@ -20,6 +20,7 @@ import { PasswordComponent } from './genrator/password/password.component';
 import { TypegameComponent } from './password/typegame/typegame.component';
 import { FormatePipe } from './formatepipe/formate.pipe';
 import { PipeformateComponent } from './formatepipe/pipeformate/pipeformate.component';
+import { DirectiveComponent } from './pages/directive/directive.component';
 
 // import {metToolbarModule} from '@angular/toolbar/'
 
@@ -49,7 +50,8 @@ const route:Routes=[
     PasswordComponent,
     TypegameComponent,
     FormatePipe,
-    PipeformateComponent
+    PipeformateComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,
